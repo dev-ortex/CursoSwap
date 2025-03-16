@@ -14,15 +14,18 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 10px; /* Ajuste de padding para evitar o overflow */
 }
 
 main {
     display: flex;
     justify-content: space-evenly;
     align-items: flex-start;
-    width: 90%;
+    width: 100%;
     max-width: 1200px;
     gap: 30px;
+    flex-wrap: wrap; /* Permite que os elementos se reorganizem em telas menores */
+    padding: 0 10px;
 }
 
 button, #btn_copia {
@@ -97,7 +100,7 @@ button:hover {
 }
 
 .caixa {
-    border:3px solid #ffffff;
+    border: 3px solid #ffffff;
     background-color: #7a4e9e;
     padding: 20px;
     display: flex;
@@ -114,4 +117,100 @@ button:hover {
 
 .caixa:hover {
     transform: scale(1.03);
+}
+
+/* Ajustes para dispositivos móveis */
+@media screen and (max-width: 1024px) {
+    body {
+        padding: 5px;
+    }
+
+    main {
+        flex-direction: row;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 20px;
+    }
+
+    .caixa {
+        width: 45%; /* Ajusta a largura das caixas para caberem proporcionalmente */
+        max-width: 350px;
+    }
+
+    button, #btn_copia {
+        width: 100%; /* Faz os botões ocuparem a largura total em telas menores */
+        font-size: 14px;
+    }
+
+    #btn_copia {
+        height: 40px;
+        font-size: 14px;
+    }
+
+    .curso {
+        height: 45px; /* Ajusta a altura dos cursos para telas menores */
+    }
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        padding: 5px;
+    }
+
+    main {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 15px; /* Ajusta o espaçamento entre as caixas */
+    }
+
+    .caixa {
+        width: 90%; /* Ajusta a largura das caixas para ocupar mais espaço em telas pequenas */
+        max-width: 350px;
+        height: auto;
+        margin: 10px 0;
+    }
+
+    button, #btn_copia {
+        width: 100%;
+        font-size: 14px;
+    }
+
+    .curso {
+        height: 40px; /* Ajusta a altura dos cursos para telas menores */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    body {
+        padding: 5px;
+    }
+
+    main {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .caixa {
+        width: 90%;
+        height: auto; /* Ajusta a altura da caixa para caber no conteúdo em telas menores */
+        margin: 10px 0;
+        padding: 10px;
+    }
+
+    button, #btn_copia {
+        width: 100%;
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    .curso {
+        height: 35px;
+    }
+
+    .curso p {
+        font-size: 14px; /* Ajusta o tamanho da fonte dos cursos para telas menores */
+    }
 }
