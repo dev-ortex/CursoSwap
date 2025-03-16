@@ -12,6 +12,10 @@ O **CursoSwap** permite que o usuário clique nos cursos para selecioná-los e, 
 2. **Movimento dos Itens:**  
    Quando o botão de cópia é pressionado, o script verifica quais cursos estão destacados e os move entre as caixas, alterando a classe `caixa2` e reposicionando os itens na caixa de destino. 🔄
 
+### 🧪 Teste a Aplicação
+
+Você pode testar a aplicação clicando [aqui](https://dev-ortex.github.io/CursoSwap/) e interagir com os cursos diretamente na página. Faça o teste e veja como funciona a movimentação dos itens entre as caixas. ✔️
+
 ### 💡 Observação
 
 Este código foi desenvolvido como um exercício para praticar a manipulação de eventos e interação com a DOM. Ele pode ser facilmente adaptado para incluir funcionalidades adicionais, como animações ou novos tipos de interações. 🚀
